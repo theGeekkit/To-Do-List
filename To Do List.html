@@ -5,45 +5,7 @@
     <title>To Do List</title>
         <link rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">      
-        <style>
-            h1, .jumbotron { padding: 30px;
-            background-color: rgb(112, 34, 38);
-            color: antiquewhite;
-            font-size: 60px;
-                padding: 20px;
-                font-weight: 700; 
-                margin-left: 50px;
-                margin-right: 50px;
-                text-align: center;
-                font-family: 'Papyrus', 'Copperplate';
-            }
-            body {
-                background-image: url('https://iili.io/4TwtrN.md.jpg');
-                background-size: cover;
-                background-position: center;
-                position: relative;
-            }
-            .container, .task {
-                display:flexbox;
-                align-content: center;
-            }
-            .addTaskButton {
-                background-color: indigo;
-                color: antiquewhite;
-                width: 190px;
-                height: 70px;
-                font-size: 40px;
-                margin-left: 10px;
-                
-            }
-            .todoContainer {
-                display: grid;
-            }
-            .todoCheckbox {
-                align-items: left;
-            }
-
-        </style>
+   
 
 </head>
 
@@ -64,63 +26,5 @@
 <div class = "todoContainer">
     
 </div>
-
-
-
-
-    
-
-    
-         <!--start javascript-->
-
-
-
-
-
-
-
-<script>
-
-   
-let addTaskButton = document.querySelector(".addTaskButton");
-addTaskButton.addEventListener('click', () => {
-    let todoContainer = document.querySelector(".todoContainer");
-    let todoInput = document.createElement("input");
-    todoInput.type = 'text';
-    
-    
-    let todoCheckBox = document.createElement("input");
-    todoCheckBox.type = 'checkBox';
-    
-    todoContainer.appendChild(todoCheckBox)
-    todoContainer.appendChild(todoInput)
-});
-
-
-
-
-
-
-
-
-
-//const tasksList = document.querySelector
-
-//const input = document.querySelector('input[type=text]');
-
-    // grab everything we need
-
-        //array of five tasks
-
-
-        //click on task as completed
-        //button?
-        //grey it out triggered by button
-        //ability to edit task?
-    // define our functions
-
-  
-   
-    </script>
 </body> 
 </html>
