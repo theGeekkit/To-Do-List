@@ -43,7 +43,7 @@
                 align-items: left;
             }
 
-             </style>
+        </style>
 
 </head>
 
@@ -81,27 +81,19 @@
 
 <script>
 
-   let tasks = ['task one', 'task two'
-];
-
-// for(i = 0, i < tasks.length, i++) {
-//     let task = document.createElement("div");
-//         task.innerText(tasks[i]);
-// }
-
-
+   
 let addTaskButton = document.querySelector(".addTaskButton");
 addTaskButton.addEventListener('click', () => {
     let todoContainer = document.querySelector(".todoContainer");
     let todoInput = document.createElement("input");
     todoInput.type = 'text';
     
-    todoContainer.appendChild(todoInput)
+    
     let todoCheckBox = document.createElement("input");
     todoCheckBox.type = 'checkBox';
     
     todoContainer.appendChild(todoCheckBox)
-    
+    todoContainer.appendChild(todoInput)
 });
 
 
