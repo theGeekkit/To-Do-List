@@ -9,9 +9,12 @@
             h1, .jumbotron { padding: 30px;
             background-color: rgb(112, 34, 38);
             color: antiquewhite;
-            font-size: 40px;
+            font-size: 60px;
                 padding: 20px;
                 font-weight: 700; 
+                margin-left: 50px;
+                margin-right: 50px;
+                text-align: center;
                 font-family: 'Papyrus', 'Copperplate';
             }
             body {
@@ -24,11 +27,22 @@
                 display:flexbox;
                 align-content: center;
             }
-            .btn {
+            .addTaskButton {
                 background-color: indigo;
                 color: antiquewhite;
+                width: 190px;
+                height: 70px;
+                font-size: 40px;
+                margin-left: 10px;
+                
             }
-                  
+            .todoContainer {
+                display: grid;
+            }
+            .todoCheckbox {
+                align-items: left;
+            }
+
              </style>
 
 </head>
@@ -42,16 +56,13 @@
 
 <h1>To Do</h1>
 
-<input type="text">
-<div type="button" class="btn">
-    Add Task
-</div> 
 
-<div class = "container">
-    <div class="task">  
-        <input type = "checkbox">
-        <label>Task1</label>
-    </div> 
+<input type="button" class="addTaskButton" value ="Add Task">
+
+</input> 
+
+<div class = "todoContainer">
+    
 </div>
 
 
@@ -70,14 +81,31 @@
 
 <script>
 
-   tasks['task one', 'task two'
+   let tasks = ['task one', 'task two'
 ];
 
-for(i = 0, i < tasks.length, i++) {
-    let task = document.createElement("div");
-        task.innerText(tasks[i]);
-        
-}
+// for(i = 0, i < tasks.length, i++) {
+//     let task = document.createElement("div");
+//         task.innerText(tasks[i]);
+// }
+
+
+let addTaskButton = document.querySelector(".addTaskButton");
+addTaskButton.addEventListener('click', () => {
+    let todoContainer = document.querySelector(".todoContainer");
+    let todoInput = document.createElement("input");
+    todoInput.type = 'text';
+    
+    todoContainer.appendChild(todoInput)
+    let todoCheckBox = document.createElement("input");
+    todoCheckBox.type = 'checkBox';
+    
+    todoContainer.appendChild(todoCheckBox)
+    
+});
+
+
+
 
 
 
