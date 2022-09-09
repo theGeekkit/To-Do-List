@@ -43,7 +43,7 @@ function tryToGetTasks() {
     try {
         return JSON.parse(localStorage.getItem('tasks')) || []
     } catch(e) {
-        console.error('oopsie', e)
+        console.error('Oh no what happened?', e)
         return []
     }
 }
