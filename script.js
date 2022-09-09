@@ -27,7 +27,26 @@ taskButton.addEventListener("click", () => {
 
 console.log(todoList)
 
+function navigate(url) {
+    location.href = url
+}
 
+function addTask(task) {
+    const tasks = tryToGetTasks()
+    console.log(tasks)
+    tasks.push(task)
+
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+}
+
+function tryToGetTasks() {
+    try {
+        return JSON.parse(localStorage.getItem('tasks')) || []
+    } catch(e) {
+        console.error('oopsie', e)
+        return []
+    }
+}
 
 
 
