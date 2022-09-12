@@ -41,7 +41,7 @@ taskButton.addEventListener("click", () => {
   
   
   
-  // console.log(todoList);
+// console.log(todoList);
 
 // function navigate(url) {
 //   location.href = url;
