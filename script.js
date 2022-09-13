@@ -4,8 +4,10 @@
 
 class TaskList {
   todoList;
+ toDoListContainer = document.querySelector(".toDoListContainer");
 constructor(){
   this.tryToGetTasks();
+  
 }
 
   addNewTask(task) {
@@ -28,9 +30,8 @@ constructor(){
               this.todoList = [];
       }
   }
-  generateTaskList() {
-    let toDoListContainer = document.querySelector(".toDoListContainer");
-    toDoListContainer.innerHTML = ''
+  generateTaskList() { 
+    this.toDoListContainer.innerHTML = ''
     this.todoList.forEach(todo => {
       this.generateTodoHtml(todo)
           
@@ -38,11 +39,10 @@ constructor(){
     });
    }
 
-   generateTodoHtml(todo) {
-    let toDoListContainer = document.querySelector(".toDoListContainer");
+   generateTodoHtml(todo) {    
     let listAddition = document.createElement("div"); 
     listAddition.textContent = todo; 
-    toDoListContainer.appendChild(listAddition);
+    this.toDoListContainer.appendChild(listAddition);
    }
 }
 
@@ -51,28 +51,11 @@ const list = new TaskList()
 
 
 list.generateTaskList()
-let toDoListContainer = document.querySelector(".toDoListContainer");
+
 let taskButton = document.querySelector("#addTaskButton");
 let taskInput = document.querySelector("#taskInput");
-let taskValue = taskInput.value;
 
 taskButton.addEventListener("click", () => {
   list.addNewTask(taskInput.value)
 });
-
-
-
-
-
-// var div = document.createElement('div');  //creating element
-// div.textContent = "Hello, World";         //adding text on the element
-// document.body.appendChild(div);           //appending the element
-
-
-
-  // generateTaskList()
-    
-// console.log(todoList);
-//   localStorage.setItem("tasks", JSON.stringify(tasks));
-// }
 

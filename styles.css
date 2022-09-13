@@ -38,3 +38,9 @@ body {
     width:80%;
 
 }
+div {
+    color: black;
+    font-size: 50px;
+    text-decoration: underline;
+    font-family: 'Schoolbell', arial, serif;    
+}
