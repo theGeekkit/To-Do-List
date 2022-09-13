@@ -1,18 +1,13 @@
 
 h1 { 
-    padding: 30px;
-    background-color:  rgb(112, 34, 38);
-    color: antiquewhite;
-    font-size: 60px;
-    padding: 10px;
+    color: black;
+    font-size: 120px;    
     font-weight: 700; 
-    margin-left: 50px;
-    margin-right: 50px;
     text-align: center;
-    font-family: 'Papyrus', 'Copperplate';
+    font-family: 'Schoolbell', arial, serif;
 }
 body {
-    background-image: url('https://iili.io/4TwtrN.md.jpg');
+    background-image: url('https://i.postimg.cc/vBh0Qd5h/pexels-pixabay-315791.jpg');
     background-size: cover;
     background-position: cover;
     position: relative;
