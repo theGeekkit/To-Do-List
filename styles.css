@@ -27,9 +27,9 @@ body {
     margin-left: 10px;
     
 }
-/* .todoContainer {
-    display: grid; 
-}*/
+/* .check-box {
+    align: flex;
+} */
 .todoCheckBox {
     float: left;
 }
