@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>To Do List</title>
-        <link href="https://fonts.googleapis.com/css?family=Schoolbell&v1" rel="stylesheet">
-        <link rel="stylesheet" href="./styles.css">     
+    <link
+      href="https://fonts.googleapis.com/css?family=Schoolbell&v1"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
 
-     
+  <body>
+    <h1>To Do</h1>
 
-</head>
+    <div id="taskInputContainer">
+      <input type="button" id="addTaskButton" value="Add Task" />
+      <input type="text" id="taskInput" />
+    </div>
 
+    <div class="toDoListContainer"></div>
 
-
-
-
-<body>
-
-
-
-<h1>Welcome Todo Jungle</h1>
-
-<div id="taskInputContainer">
-    <input type="button" id="addTaskButton" value ="Add Task">
-    <input type="text" id="taskInput">
-</div>
-
-<div class = "toDoListContainer">   
-  
-</div>
-<div class="check-box">
-  <label for="done">
-    <input type="checkbox" id="checkbox" name="done" value="yes">
-  </label>
-</div>
-  
-
-<script src="script.js"></script>
-</body> 
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -7,7 +7,7 @@ h1 {
     font-family: 'Schoolbell', arial, serif;
 }
 body {
-    background-image: url('https://i.postimg.cc/vBh0Qd5h/pexels-pixabay-315791.jpg');
+    background-image: url('https://iili.io/iRCOwG.md.jpg" alt="iRCOwG.md.jpg');
     background-size: cover;
     background-position: cover;
     position: relative;
@@ -27,12 +27,6 @@ body {
     margin-left: 10px;
     
 }
-/* .check-box {
-    align: flex;
-} */
-.todoCheckBox {
-    float: left;
-}
 
 #taskInput {
     width:80%;
@@ -43,4 +37,9 @@ div {
     font-size: 50px;
     text-decoration: underline;
     font-family: 'Schoolbell', arial, serif;    
+}
+
+input [type ="checkBox"] {
+    width:50px;
+    height:50px;
 }

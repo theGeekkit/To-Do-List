@@ -4,74 +4,61 @@
 
 class TaskList {
   todoList;
- toDoListContainer = document.querySelector(".toDoListContainer");
-constructor(){
-  this.tryToGetTasks();
-  
-}
+  toDoListContainer = document.querySelector(".toDoListContainer");
+  constructor() {
+    this.tryToGetTasks();
+  }
 
   addNewTask(task) {
-    
-          this.todoList.push(task);
-          this.generateTodoHtml(task)
-          this.saveList()
-
+    this.todoList.push(task);
+    this.generateTodoHtml(task);
+    this.saveList();
   }
 
   saveList() {
-    localStorage.setItem('tasks', JSON.stringify(this.todoList))
+    localStorage.setItem("tasks", JSON.stringify(this.todoList));
   }
-  
+
   tryToGetTasks() {
-      try {
-          this.todoList = JSON.parse(localStorage.getItem("tasks")) || [];
-            } catch (e) {
-              console.error("Oh no what happened?", e);
-              this.todoList = [];
-      }
+    try {
+      this.todoList = JSON.parse(localStorage.getItem("tasks")) || [];
+    } catch (e) {
+      console.error("Oh no what happened?", e);
+      this.todoList = [];
+    }
   }
-  generateTaskList() { 
-    this.toDoListContainer.innerHTML = ''
-    this.todoList.forEach(todo => {
-      this.generateTodoHtml(todo)
-          
-      
+  generateTaskList() {
+    this.toDoListContainer.innerHTML = "";
+    this.todoList.forEach((todo) => {
+      this.generateTodoHtml(todo);
     });
 
-    this.todoList.forEach(todo => {
-      this.generateCheckBox(checkbox)
-    })
-    
+    // this.todoList.forEach((todo) => {
+    //   this.generateCheckBox(checkbox);
+    // });
+  }
 
-   }
+  generateTodoHtml(todo) {
+    let todoCheckBox = document.createElement("input");
+    todoCheckBox.type = "checkbox";
+    this.toDoListContainer.appendChild(todoCheckBox);
 
-   generateTodoHtml(todo) {    
-    let listAddition = document.createElement("div");    
-    listAddition.textContent = todo; 
+    let listAddition = document.createElement("div");
+    listAddition.textContent = todo;
     this.toDoListContainer.appendChild(listAddition);
-    
-   }
+  }
 }
 
+const list = new TaskList();
 
-
-const list = new TaskList()
-
-
-
-list.generateTaskList()
+list.generateTaskList();
 
 let taskButton = document.querySelector("#addTaskButton");
 let taskInput = document.querySelector("#taskInput");
 
 taskButton.addEventListener("click", () => {
-  list.addNewTask(taskInput.value)
-  document.createElement()
-
+  list.addNewTask(taskInput.value);
 });
-
-
-
 
 // document.createElement(checkbox);
 // document.body.appendChild(checkbox);
