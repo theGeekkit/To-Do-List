@@ -41,6 +41,7 @@ class TaskList {
   generateTodoHtml(todo) {
     let todoCheckBox = document.createElement("input");
     todoCheckBox.type = "checkbox";
+    todoCheckBox.className = "checkbox";
     this.toDoListContainer.appendChild(todoCheckBox);
 
     let listAddition = document.createElement("div");
