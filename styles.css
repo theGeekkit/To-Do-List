@@ -44,11 +44,18 @@ div {
 .checkbox{
     width:40px;
     height:40px;
+
+
 }
 
 .toDoListContainer {
-    display:flex;
+    display:grid;
+    padding-left: 15%;
+    
+    
+
 }
+
 
 
 

@@ -39,16 +39,21 @@ class TaskList {
   }
 
   generateTodoHtml(todo) {
-    let todoCheckBox = document.createElement("input");
-    todoCheckBox.type = "checkbox";
-    todoCheckBox.className = "checkbox";
-    this.toDoListContainer.appendChild(todoCheckBox);
-
+    // let todoCheckBox = document.createElement("input")
+    // todoCheckBox.type = "checkbox"
+    // todoCheckBox.className = "checkbox"
+    // this.toDoListContainer.appendChild(todoCheckBox)
+    
     let listAddition = document.createElement("div");
     listAddition.textContent = todo;
     this.toDoListContainer.appendChild(listAddition);
+
+    listAddition.addEventListener("click", () => {
+      listAddition.style.textDecoration = "line-through";
+    })
   }
 }
+
 
 const list = new TaskList();
 
@@ -59,6 +64,12 @@ let taskInput = document.querySelector("#taskInput");
 
 taskButton.addEventListener("click", () => {
   list.addNewTask(taskInput.value);
+  location.reload()
+  // document.createElement();
+  
+
+
+  
 });
 
 // document.createElement(checkbox);
