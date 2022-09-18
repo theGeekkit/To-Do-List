@@ -49,7 +49,11 @@ class TaskList {
     this.toDoListContainer.appendChild(listAddition);
 
     listAddition.addEventListener("click", () => {
+      
       listAddition.style.textDecoration = "line-through";
+
+      
+
     })
   }
 }
